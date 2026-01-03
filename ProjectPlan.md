@@ -74,3 +74,7 @@ ros2 run rviz2 rviz2
 
 - add <collision> and <intertial> properties to all links in urdf
 - add gazebo reference to all the links
+
+#### differential drive plugin
+
+- add libgazebo_ros_diff_drive to urdf

@@ -32,5 +32,5 @@ def generate_launch_description():
 
     return LaunchDescription([
         node_robot_state_publisher,
-        node_joint_state_publisher_gui
+        # node_joint_state_publisher_gui
     ])
