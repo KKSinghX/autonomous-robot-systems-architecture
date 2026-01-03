@@ -78,3 +78,10 @@ ros2 run rviz2 rviz2
 #### differential drive plugin
 
 - add libgazebo_ros_diff_drive to urdf
+- remove joint publisher
+- **No one is publishig on joint states, yet rviz working fine?**
+
+#### gazebo sensor plugin
+
+- add physical link and joint in urdf
+- add gazebo reference for sensor plugin in urdf
