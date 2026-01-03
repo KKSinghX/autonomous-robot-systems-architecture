@@ -12,6 +12,14 @@
         <color rgba="0 0 1 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry><box size="0.3 0.2 0.1"/></geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00208" ixy="0" ixz="0" iyy="0.00416" iyz="0" izz="0.00541"/>
+    </inertial>
   </link>
 
   <joint name="base_joint" type="fixed">
@@ -29,6 +37,13 @@
         <color rgba="0 0 0 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry><cylinder radius="0.05" length="0.04"/></geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1" rpy="0 0 0"/>
+      <inertia ixx="0.000075" ixy="0" ixz="0" iyy="0.000075" iyz="0" izz="0.000125"/>
+    </inertial>
   </link>
 
   <joint name="left_wheel_joint" type="continuous">
@@ -45,6 +60,17 @@
       </geometry>
       <material name="black"/>
     </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.04"/>
+      </geometry>
+    </collision>
+  
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.000075" ixy="0" ixz="0" iyy="0.000075" iyz="0" izz="0.000125"/>
+    </inertial>
   </link>
 
   <joint name="right_wheel_joint" type="continuous">
@@ -63,6 +89,14 @@
         <color rgba="0.5 0.5 0.5 1"/>
       </material>
     </visual>
+    <collision>
+      <geometry>
+        <sphere radius="0.03"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.05"/> <inertia ixx="0.000018" ixy="0" ixz="0" iyy="0.000018" iyz="0" izz="0.000018"/>
+    </inertial>
   </link>
 
   <joint name="caster_wheel_joint" type="fixed">
@@ -70,5 +104,24 @@
     <child link="caster_wheel"/>
     <origin xyz="0.1 0 -0.07" rpy="0 0 0"/>
   </joint>
+
+  <gazebo reference="base_link">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  
+  <gazebo reference="left_wheel">
+      <material>Gazebo/Black</material>
+      <mu1 value="0.2"/> <mu2 value="0.2"/>
+  </gazebo>
+  
+  <gazebo reference="right_wheel">
+      <material>Gazebo/Black</material>
+      <mu1 value="0.2"/> <mu2 value="0.2"/>
+  </gazebo>
+  
+  <gazebo reference="caster_wheel">
+      <material>Gazebo/Grey</material>
+      <mu1 value="0.001"/> <mu2 value="0.001"/>
+  </gazebo>
 
 </robot>

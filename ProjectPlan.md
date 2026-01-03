@@ -69,3 +69,8 @@ source install/setup.bash
 ros2 launch my_robot_description rsp.launch.py
 ros2 run rviz2 rviz2
 ```
+
+#### gazebo information
+
+- add <collision> and <intertial> properties to all links in urdf
+- add gazebo reference to all the links
