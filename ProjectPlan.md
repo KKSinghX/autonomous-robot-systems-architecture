@@ -45,6 +45,27 @@ Autonomous Differential Drive Mobile Robot integration
 | Caster Radius  | rcaster​ | 0.03 m         | Smaller than drive wheels to ensure ground contact. |
 
 #### create package
+
 ```bash
 ros2 pkg create --build-type ament_cmake  my_robot_description
+cd src/my_robot_description
+mkdir urdf meshes launch config worlds
+```
+
+#### create URDF
+
+#### create launch file
+
+#### build
+
+```bash
+colcon build --packages-select my_robot_description
+source install/setup.bash
+```
+
+#### launch
+
+```bash
+ros2 launch my_robot_description rsp.launch.py
+ros2 run rviz2 rviz2
 ```
