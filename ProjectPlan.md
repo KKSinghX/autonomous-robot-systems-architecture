@@ -85,3 +85,7 @@ ros2 run rviz2 rviz2
 
 - add physical link and joint in urdf
 - add gazebo reference for sensor plugin in urdf
+
+#### fix for ignition gazebo
+
+- ign topic -l

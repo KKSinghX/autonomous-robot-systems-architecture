@@ -4,6 +4,7 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
+        - /Global Options1
         - /TF1/Tree1
       Splitter Ratio: 0.6725784540176392
     Tree Height: 1478
@@ -114,28 +115,17 @@ Visualization Manager:
           Value: true
         laser_frame:
           Value: true
-        left_wheel:
-          Value: true
-        odom:
-          Value: true
-        right_wheel:
-          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        odom:
-          base_footprint:
-            base_link:
-              caster_wheel:
-                {}
-              laser_frame:
-                {}
-            left_wheel:
+        base_footprint:
+          base_link:
+            caster_wheel:
               {}
-            right_wheel:
+            laser_frame:
               {}
       Update Interval: 0
       Value: true
@@ -176,7 +166,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: odom
+    Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -219,7 +209,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 2.306405544281006
+      Distance: 1.2171638011932373
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
