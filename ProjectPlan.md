@@ -91,4 +91,25 @@ ros2 run rviz2 rviz2
 - ign topic -l
 - ign model --list
 - ign model -m my_robot -j
-- 
+
+#### Issue identification and resolution
+
+ros2 launch my_robot_description launch_sim.launch.py use_sim_time:=True
+ros2 run rviz2 rviz2 --ros-args -p use_sime_time:=True
+
+##### Issue
+
+The robot is not able to move
+
+- Check all topics and gazebo side
+- Check all topics on ros2 side
+- See the proper mapping
+- make checklist on ros2 side to make it work
+  - gazebo to ros2
+    - /scan
+    - /joint_states
+    - /odom
+  - ros2 to gazebo
+    - /cmd_vel
+    - /robot_state_publisher
+- Check the and confirm the urdf file

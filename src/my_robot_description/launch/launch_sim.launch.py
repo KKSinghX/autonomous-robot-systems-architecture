@@ -51,11 +51,12 @@ def generate_launch_description():
         executable='parameter_bridge',
         arguments=[
             '/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
-            '/odom@nav_msgs/msg/Odometry[gz.msgs.Odometry',
+            '/model/my_robot/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry',
             '/world/empty/model/my_robot/link/base_footprint/sensor/laser/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
             '/world/empty/model/my_robot/joint_state@sensor_msgs/msg/JointState[gz.msgs.Model',
         ],
         remappings=[
+            ('/model/my_robot/odometry', '/odom'),
             ('/world/empty/model/my_robot/joint_state', '/joint_states'),
             ('/world/empty/model/my_robot/link/base_footprint/sensor/laser/scan', '/scan'),
         ],
