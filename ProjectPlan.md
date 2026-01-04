@@ -89,3 +89,6 @@ ros2 run rviz2 rviz2
 #### fix for ignition gazebo
 
 - ign topic -l
+- ign model --list
+- ign model -m my_robot -j
+- 
