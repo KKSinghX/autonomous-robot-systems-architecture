@@ -52,13 +52,15 @@ def generate_launch_description():
         arguments=[
             '/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist',
             '/model/my_robot/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry',
-            '/world/empty/model/my_robot/link/base_footprint/sensor/laser/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
+            '/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
             '/world/empty/model/my_robot/joint_state@sensor_msgs/msg/JointState[gz.msgs.Model',
+            '/model/my_robot/tf@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
         ],
         remappings=[
             ('/model/my_robot/odometry', '/odom'),
             ('/world/empty/model/my_robot/joint_state', '/joint_states'),
-            ('/world/empty/model/my_robot/link/base_footprint/sensor/laser/scan', '/scan'),
+            # ('/world/empty/model/my_robot/link/base_footprint/sensor/laser/scan', '/scan'),
+            ('/model/my_robot/tf', '/tf'),
         ],
         output='screen'
     )

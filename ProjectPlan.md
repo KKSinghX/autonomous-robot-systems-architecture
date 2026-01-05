@@ -113,3 +113,32 @@ The robot is not able to move
     - /cmd_vel
     - /robot_state_publisher
 - Check the and confirm the urdf file
+
+**https://gazebosim.org/api/gazebo/6/classignition_1_1gazebo_1_1systems_1_1DiffDrive.html**
+
+##### Key issues, resolution and learnings
+
+- diff drive gazebo plugin
+  - set topic
+    - ```xml
+      <topic>/cmd_vel</topic>
+      <odom_topic>/model/my_robot/odometry</odom_topic>
+      ```
+  - set frame id
+    - ```xml
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_footprint</child_frame_id>
+      ```
+- lidar sensor gazebo plugin
+  - set topic
+    - ```xml
+      <topic>scan</topic>
+      ```
+  - set frame id
+    - considering ignition fortress
+    - use gz_frame_id otherwise
+    - ```xml
+      <ignition_frame_id>laser_frame</ignition_frame_id>
+      ```
+- important url
+  - https://gazebosim.org/docs/latest/migrating_gazebo_classic_ros2_packages/#
